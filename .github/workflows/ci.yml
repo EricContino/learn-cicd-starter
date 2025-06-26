@@ -20,3 +20,10 @@ jobs:
 
       - name: Force Failure
         run: go test -cover ./...
+
+    name: Style
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check Style
+        run: test -z $(go fmt ./...)
